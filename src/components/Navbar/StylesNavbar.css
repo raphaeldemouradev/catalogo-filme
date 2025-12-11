@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+div.content {
+    background-color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.container {
+    display: block;
+    margin: auto 0px;
+}
+
+h3 {
+    color: white;
+}
