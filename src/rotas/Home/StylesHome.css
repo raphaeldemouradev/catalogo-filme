@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+div.contentHome {
+    padding: 5px;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    color: white;
+}

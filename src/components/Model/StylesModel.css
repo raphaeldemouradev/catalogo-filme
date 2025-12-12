@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+div.contentModel {
+    background-color: #ff0000;
+    width: 120px;
+    height: 150px;
+    border: 1px solid beige;
+    margin: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+div.imgModel {
+    width: 100%;
+    height: 100px;
+}
+
+div.detailsModel {
+    background-color: #505050;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.detailsModel button {
+    background-color: #3b3b3b;
+}

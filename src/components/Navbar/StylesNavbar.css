@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-div.content {
+div.contentNav {
     background-color: black;
     padding: 10px;
     display: flex;
     justify-content: space-between;
 }
 
-div.container {
+div.containerNav {
     display: block;
     margin: auto 0px;
 }

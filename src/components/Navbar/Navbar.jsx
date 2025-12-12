@@ -2,8 +2,8 @@ import './StylesNavbar.css';
 
 function Navbar() {
     return (
-        <div className='content'>
-            <div className='container'>
+        <div className='contentNav'>
+            <div className='containerNav'>
                 <h3>LOGTV</h3>
             </div>
             <div>
