@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import './StylesDetalhes.css';
+import './StylesSearch.css';
 
-function Detalhes() {
+function Search() {
     const funcNav = useNavigate()
     function Navega() {
         funcNav('/Home')
@@ -14,4 +14,4 @@ function Detalhes() {
     )
 }
 
-export default Detalhes
+export default Search

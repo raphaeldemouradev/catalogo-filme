@@ -1,9 +1,11 @@
+@charset "UTF-8";
+
 div {
     display: block;
     text-align: center;
 }
 
-button {
+button.dft {
     background-color: #505050;
     padding: 5px;
     border-radius: 10px;

@@ -14,20 +14,6 @@ function Home() {
         <Navbar />
         <div className="contentHome">
           <Model />
-          <Model />
-          <Model />
-        </div>
-
-        <div className="contentHome">
-          <Model />
-          <Model />
-          <Model />
-        </div>
-
-        <div className="contentHome">
-          <Model />
-          <Model />
-          <Model />
         </div>
 
         <h2>Home pag</h2>

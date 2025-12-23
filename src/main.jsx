@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import Home from './rotas/Home/Home.jsx'
 import Detalhes from './rotas/Detalhes/Detalhes.jsx'
+import Search from './rotas/Search/Search.jsx'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/Detalhes",
     element: <Detalhes />,
+  },
+  {
+    path: "/Search",
+    element: <Search />,
   },
 ])
 

@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import './App.css'
 import { useNavigate } from 'react-router-dom';
 
@@ -10,7 +11,7 @@ function App() {
   return (
     <div>
       <h1>Pagina de Inicio</h1>
-      <button onClick={Navega}>Ir para Home</button>
+      <button className='dft' onClick={Navega}>Ir para Home</button>
     </div>
   )
 }
