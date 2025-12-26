@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import './StylesModel.css';
 
@@ -7,12 +7,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 const imageUrl = import.meta.env.VITE_IMAGE_URL;
 
 function Model() {
-    const funcNav = useNavigate(); 
-    function Navega() {
-      funcNav('/Detalhes')
-    }
-
-    // Hook de Busca
+    // Hook de Busca do TOP 20
     const [dados, setDados] = useState([]);
 
     useEffect(() => {
@@ -33,7 +28,7 @@ function Model() {
 
       dadosApi();
     }, []);
-    // Hook de Busca
+    // Hook de Busca do TOP 20
     
     return (
         <div className='containerModel'>
@@ -43,7 +38,7 @@ function Model() {
                 <img src={`${imageUrl}${movie.poster_path}`} alt={movie.title} />
               </div>
               <div className='detailsModel'>
-                <button onClick={Navega}>Detalhes</button>
+                <Link to={`/Detalhes/${movie.id}`} className='link-button'>Detalhes</Link>
               </div>
             </div>
           ))}

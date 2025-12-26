@@ -1,14 +1,19 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import './StylesDetalhes.css';
 
 function Detalhes() {
-    const funcNav = useNavigate()
+    // Hook URL do filme clicado
+    const { id } = useParams();
+
+    // Hook Voltar
+    const funcNav = useNavigate();
     function Navega() {
-        funcNav('/Home')
+        funcNav(`/Home`)
     }
 
     return (
         <div>
+            <h1>Detalhes do filme: {id}</h1>
             <button onClick={Navega}>Voltar</button>
         </div>
     )

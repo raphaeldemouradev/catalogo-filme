@@ -39,9 +39,9 @@ div.detailsModel { /* backgraund atras do botao */
     justify-content: center;
 }
 
-div.detailsModel button {
-    background-color: #7a7a7a;
+div.detailsModel .link-button {
     border-radius: 5px;
     padding: 1px 5px;
     cursor: pointer;
+    color: white;
 }

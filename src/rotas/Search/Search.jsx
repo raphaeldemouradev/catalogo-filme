@@ -1,4 +1,4 @@
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Navbar from '../../components/Navbar/Navbar.jsx'
 import './StylesSearch.css';
@@ -8,11 +8,12 @@ const apiKey = import.meta.env.VITE_API_KEY;
 const imageUrl = import.meta.env.VITE_IMAGE_URL;
 
 function Search() {
-    const funcNav = useNavigate()
+    const funcNav = useNavigate();
     function Navega() {
         funcNav('/Home')
     }
 
+    // Hook URL
     const [searchParams] = useSearchParams();
     const query = searchParams.get('query') || '';
 
@@ -35,7 +36,7 @@ function Search() {
       };
 
       dadosApi();
-    }, []);
+    }, [query]);
     // Hook de Busca
 
     return (
@@ -54,7 +55,7 @@ function Search() {
                                 <img src={`${imageUrl}${movie.poster_path}`} alt={movie.title} />
                             </div>
                             <div className='detailsModel'>
-                                <button onClick={Navega}>Detalhes</button>
+                                <Link to={`/Detalhes/${movie.id}`} className='link-button'>Detalhes</Link>
                             </div>
                         </div>
                     ))}

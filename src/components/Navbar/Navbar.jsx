@@ -5,7 +5,11 @@ import './StylesNavbar.css';
 function Navbar() {
     const funcNav = useNavigate()
     function Navega() {
-        funcNav(`/Search?query=${search}`)
+        if (search == "") {
+            alert("Erro de Busca")
+        } else {
+            funcNav(`/Search?query=${search}`)
+        }
     }
 
     const [search, setSearch] = useState('');
