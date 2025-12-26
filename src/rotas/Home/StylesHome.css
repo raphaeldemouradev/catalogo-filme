@@ -4,7 +4,7 @@ div.contentHome {
     padding: 5px;
     background-color: blue;
     display: flex;
-    height: 100vh;
+    height: 100%;
 }
 
 h2 {

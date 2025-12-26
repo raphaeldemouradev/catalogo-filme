@@ -21,3 +21,7 @@ div.searchArea button {
     margin-left: 5px;
     padding: 2px;
 }
+
+div.searchArea input[type=text] {
+    width: 150px;
+}
