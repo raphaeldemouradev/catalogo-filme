@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+header.header-detalhes {
+    background-color: black;
+    color: white;
+    padding: 10px 0px;
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+header.header-detalhes button {
+    margin: 0px 10px;
+    padding: 0px 5px;
+}
+
+/* body */
+/* img */
+img.img-detalhes {
+    background-color: #3f3f3f;
+    max-width: 100%;
+    max-height: 750px;
+    display: block;
+}
+
+/* info */
+div.info-movie {
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding: 5px;
+}
+
+div.info-movie h3 {
+
+}
