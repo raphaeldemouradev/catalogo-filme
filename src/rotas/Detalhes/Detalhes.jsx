@@ -57,18 +57,17 @@ function Detalhes() {
                         <h2>{dados.title}</h2>
                             <aside>
                                 <div>
-                                    <p>Nota Média</p> 
-                                    <p>{Number(dados.vote_average).toFixed(1)}</p>
+                                    <p><span class="material-symbols-outlined">star_rate_half</span>{Number(dados.vote_average).toFixed(1)}</p>
                                 </div>
 
                                 <div>
-                                    <p>Time</p>
-                                    <p>{dados.runtime}</p>
+                                    <p>
+                                        <span class="material-symbols-outlined">schedule</span>
+                                        {dados.runtime} min</p>
                                 </div>
 
                                 <div>
-                                    <p>Lançamento</p>
-                                    <p>{parseFloat(dados.release_date)}</p>
+                                    <p><span class="material-symbols-outlined">calendar_month</span>{parseFloat(dados.release_date)}</p>
                                 </div>
                             </aside>
                         <p className='description'>{dados.overview}</p>
@@ -76,10 +75,10 @@ function Detalhes() {
 
 
                     <div className='credits'>
-                        <p>Nota média (imdb): {dados.vote_average}</p>
+                        <p>Nota média (imdb): {Number(dados.vote_average).toFixed(1)}</p>
+                        <p>Total de votos (imdb): {dados.vote_count}</p>
                         <p>Tempo: {dados.runtime}</p>
                         <p>Lançado em: {dados.release_date}</p>
-                        <p>Total de votos (imdb): {dados.vote_count}</p>
                     </div>
                 </section>
             </main>
