@@ -45,21 +45,44 @@ function Detalhes() {
                 <h2>LOGTV</h2>
             </header>
 
-            <div className='content-detalhes'>
+            <main className='content-detalhes'>
                 <img 
                     src={`${imageUrl}${dados.poster_path}`} 
                     alt={dados.title}
                     className='img-detalhes'
                 />
 
-                <div className='info-movie'>
-                    <h2>{dados.title}</h2>
-                    <p>Tempo: {dados.runtime}</p>
-                    <p>Nota média (imdb): {dados.vote_average}</p>
-                    <p>Lançado em: {dados.release_date}</p>
-                    <p>Total de votos (imdb): {dados.vote_count}</p>
-                </div>
-            </div>
+                <section className='info-movie'>
+                    <div className='title-movie'>
+                        <h2>{dados.title}</h2>
+                            <aside>
+                                <div>
+                                    <p>Nota Média</p> 
+                                    <p>{Number(dados.vote_average).toFixed(1)}</p>
+                                </div>
+
+                                <div>
+                                    <p>Time</p>
+                                    <p>{dados.runtime}</p>
+                                </div>
+
+                                <div>
+                                    <p>Lançamento</p>
+                                    <p>{parseFloat(dados.release_date)}</p>
+                                </div>
+                            </aside>
+                        <p className='description'>{dados.overview}</p>
+                    </div>
+
+
+                    <div className='credits'>
+                        <p>Nota média (imdb): {dados.vote_average}</p>
+                        <p>Tempo: {dados.runtime}</p>
+                        <p>Lançado em: {dados.release_date}</p>
+                        <p>Total de votos (imdb): {dados.vote_count}</p>
+                    </div>
+                </section>
+            </main>
         </div>
     )
 }

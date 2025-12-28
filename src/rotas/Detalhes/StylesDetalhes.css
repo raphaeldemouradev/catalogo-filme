@@ -14,7 +14,7 @@ header.header-detalhes button {
     padding: 0px 5px;
 }
 
-/* body */
+/* main */
 /* img */
 img.img-detalhes {
     background-color: #3f3f3f;
@@ -24,13 +24,44 @@ img.img-detalhes {
 }
 
 /* info */
-div.info-movie {
+section.info-movie {
     background-color: black;
     color: white;
-    text-align: left;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
-div.info-movie h3 {
+div.title-movie {
+    display: block;
+    text-align: left;
+}
 
+div.title-movie h2 {
+    padding: 0px 0px 10px 0px;
+}
+
+/*Faixa abaixo do titulo*/
+div.title-movie aside {
+    display: flex;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+div.title-movie aside div {
+    background-color: #3d3d3d;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+div.title-movie aside div p {
+    padding: 3px;
+}
+
+/*Descrição Abaixo da faixa*/
+.description {
+    padding-bottom: 10px;
+}
+
+/*Creditos*/
+.credits {
+    text-align: left;
 }
