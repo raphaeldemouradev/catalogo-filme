@@ -9,9 +9,10 @@ header.header-detalhes {
     height: auto;
 }
 
-header.header-detalhes button {
+header.header-detalhes span {
     margin: 0px 10px;
     padding: 0px 5px;
+    cursor: pointer;
 }
 
 /* main */
@@ -25,7 +26,7 @@ img.img-detalhes {
 
 /* info */
 section.info-movie {
-    background-color: black;
+    background-color: rgb(23, 0, 37);
     color: white;
     padding: 10px;
 }
@@ -39,16 +40,18 @@ div.title-movie h2 {
     padding: 0px 0px 10px 0px;
 }
 
+div.title-movie h3 {
+    padding: 0px 0px 10px 0px;
+}
+
 /*Faixa abaixo do titulo*/
 div.title-movie aside {
     display: flex;
     padding-bottom: 10px;
-    justify-content: space-between;
 }
 
 div.title-movie aside div {
-    background-color: #3d3d3d;
-    padding: 5px 8px;
+    padding: 5px 10px 5px 0px;
     border-radius: 10px;
 }
 
@@ -69,6 +72,6 @@ div.title-movie aside div p span {
 }
 
 /*Creditos*/
-.credits {
+.credits div {
     text-align: left;
 }

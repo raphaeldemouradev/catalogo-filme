@@ -26,7 +26,7 @@ function Navbar() {
                     value={search}
                     onChange={(event) => setSearch(event.target.value)}
                 />
-                <button onClick={Navega} type='submit'>🔎</button>
+                <span class="material-symbols-outlined" onClick={Navega} type='submit'>search</span>
             </div>
         </div>
     )

@@ -3,6 +3,7 @@
 div.contentNav {
     background-color: black;
     padding: 10px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -16,12 +17,20 @@ h3 {
     color: white;
 }
 
-div.searchArea button {
+div.searchArea {
+    display: flex;
+}
+
+div.searchArea span {
     border-radius: 50%;
     margin-left: 5px;
     padding: 2px;
+    color: white;
+    background-color: rgb(82, 82, 82);
 }
 
 div.searchArea input[type=text] {
     width: 150px;
+    border-radius: 5px;
+    padding-left: 2px;
 }

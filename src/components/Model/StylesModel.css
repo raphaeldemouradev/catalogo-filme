@@ -1,7 +1,6 @@
 @charset "UTF-8";
 
 div.containerModel {
-    background-color: green;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

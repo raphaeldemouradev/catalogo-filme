@@ -41,7 +41,7 @@ function Detalhes() {
     return (
         <div>
             <header className='header-detalhes'>
-                <button onClick={Navega}>Voltar</button>
+                <span class="material-symbols-outlined" onClick={Navega}>arrow_back</span>
                 <h2>LOGTV</h2>
             </header>
 
@@ -55,6 +55,8 @@ function Detalhes() {
                 <section className='info-movie'>
                     <div className='title-movie'>
                         <h2>{dados.title}</h2>
+                        <h3>{(dados.genres?.map(g => g.name).join(', '))}</h3>
+
                             <aside>
                                 <div>
                                     <p><span class="material-symbols-outlined">star_rate_half</span>{Number(dados.vote_average).toFixed(1)}</p>
@@ -70,15 +72,19 @@ function Detalhes() {
                                     <p><span class="material-symbols-outlined">calendar_month</span>{parseFloat(dados.release_date)}</p>
                                 </div>
                             </aside>
-                        <p className='description'>{dados.overview}</p>
+                        
+                        <p className='description'><strong>DESCRIÇÃO:</strong> {dados.overview}</p>
                     </div>
 
 
                     <div className='credits'>
-                        <p>Nota média (imdb): {Number(dados.vote_average).toFixed(1)}</p>
-                        <p>Total de votos (imdb): {dados.vote_count}</p>
-                        <p>Tempo: {dados.runtime}</p>
-                        <p>Lançado em: {dados.release_date}</p>
+                        <div>
+                            <h3>Creditos (imdb)</h3>
+                            <p>Nota média (imdb): {Number(dados.vote_average).toFixed(1)}</p>
+                            <p>Total de votos (imdb): {dados.vote_count}</p>
+                            <p>Tempo: {dados.runtime}</p>
+                            <p>Lançado em: {dados.release_date}</p>
+                        </div>
                     </div>
                 </section>
             </main>

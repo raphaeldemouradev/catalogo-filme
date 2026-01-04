@@ -41,8 +41,10 @@ function Search() {
 
     return (
         <div className='containerSearch'>
-            <Navbar />
-            <button onClick={Navega} className='nav-button'>Voltar Home</button>
+            <div className='searchNavbar'>
+                <span class="material-symbols-outlined" onClick={Navega}>arrow_back</span>
+                <Navbar />
+            </div>
             <div className='contentSearch'>
                 <section>
                     <h3>Resultados para: {query}</h3>
