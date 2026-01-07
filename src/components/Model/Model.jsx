@@ -19,8 +19,7 @@ function Model() {
           console.log(`Erro de HTTP: Status ${response.status}`);
         } else {
           const res = await response.json();
-          console.log(res.results.poster_path);
-          console.log(res.results);
+          //console.log(res.results);
 
           setDados(res.results);
         }

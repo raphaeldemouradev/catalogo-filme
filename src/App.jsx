@@ -8,9 +8,11 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Pagina de Inicio</h1>
-      <button className='dft' onClick={Navega}>Ir para Home</button>
+    <div className='door'>
+      <div>
+        <h1>Pagina de Inicio</h1>
+        <button className='dft' onClick={Navega}>Ir para Home</button>
+      </div>
     </div>
   )
 }

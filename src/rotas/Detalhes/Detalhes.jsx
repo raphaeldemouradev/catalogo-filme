@@ -28,8 +28,8 @@ function Detalhes() {
                 console.log(`Erro de HTTP: Status ${response.status}`);
             } else {
                 const res = await response.json();
+                //console.log(res);
 
-                console.log(res);
                 setDados(res);
             }
         };
@@ -41,7 +41,7 @@ function Detalhes() {
     return (
         <div>
             <header className='header-detalhes'>
-                <span class="material-symbols-outlined" onClick={Navega}>arrow_back</span>
+                <span className="material-symbols-outlined" onClick={Navega}>arrow_back</span>
                 <h2>LOGTV</h2>
             </header>
 
@@ -59,17 +59,17 @@ function Detalhes() {
 
                             <aside>
                                 <div>
-                                    <p><span class="material-symbols-outlined">star_rate_half</span>{Number(dados.vote_average).toFixed(1)}</p>
+                                    <p><span className="material-symbols-outlined">star_rate_half</span>{Number(dados.vote_average).toFixed(1)}</p>
                                 </div>
 
                                 <div>
                                     <p>
-                                        <span class="material-symbols-outlined">schedule</span>
+                                        <span className="material-symbols-outlined">schedule</span>
                                         {dados.runtime} min</p>
                                 </div>
 
                                 <div>
-                                    <p><span class="material-symbols-outlined">calendar_month</span>{parseFloat(dados.release_date)}</p>
+                                    <p><span className="material-symbols-outlined">calendar_month</span>{parseFloat(dados.release_date)}</p>
                                 </div>
                             </aside>
                         

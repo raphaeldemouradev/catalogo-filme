@@ -29,8 +29,8 @@ function Search() {
           console.log(`Erro de HTTP: Status ${response.status}`);
         } else {
           const res = await response.json();
+          //console.log(res.results);
 
-          console.log(res.results);
           setDados(res.results);
         }
       };
@@ -42,7 +42,7 @@ function Search() {
     return (
         <div className='containerSearch'>
             <div className='searchNavbar'>
-                <span class="material-symbols-outlined" onClick={Navega}>arrow_back</span>
+                <span className="material-symbols-outlined" onClick={Navega}>arrow_back</span>
                 <Navbar />
             </div>
             <div className='contentSearch'>

@@ -1,8 +1,16 @@
 @charset "UTF-8";
 
-div {
+div.door {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.door div {
     display: block;
     text-align: center;
+    color: white;
 }
 
 button.dft {

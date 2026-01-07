@@ -16,8 +16,10 @@ function Home() {
           <Model />
         </div>
 
-        <h2>Home pag</h2>
-        <button onClick={Navega}>Voltar para Inicio</button>
+        <div className="voltar">
+          <h2>Home pag</h2>
+          <button onClick={Navega}>Voltar para Inicio</button>
+        </div>
     </div>
   )
 }

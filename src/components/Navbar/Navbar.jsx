@@ -4,11 +4,18 @@ import './StylesNavbar.css';
 
 function Navbar() {
     const funcNav = useNavigate()
+
     function Navega() {
         if (search == "") {
             alert("Erro de Busca")
         } else {
             funcNav(`/Search?query=${search}`)
+        }
+    }
+
+    const keyEnter = (event) => {
+        if (event.key === 'Enter') {
+            Navega();
         }
     }
 
@@ -25,8 +32,14 @@ function Navbar() {
                     placeholder='Search Movie' 
                     value={search}
                     onChange={(event) => setSearch(event.target.value)}
+                    onKeyDown={keyEnter}
                 />
-                <span class="material-symbols-outlined" onClick={Navega} type='submit'>search</span>
+                <span 
+                    className="material-symbols-outlined" 
+                    onClick={Navega} 
+                    type='submit'
+                    >search
+                </span>
             </div>
         </div>
     )
