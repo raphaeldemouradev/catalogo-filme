@@ -3,28 +3,28 @@ import { useNavigate } from 'react-router-dom';
 import './StylesNavbar.css';
 
 function Navbar() {
-    const funcNav = useNavigate()
+    const [search, setSearch] = useState('');
 
-    function Navega() {
+    const NavTo = useNavigate()
+
+    function FuncNav() {
         if (search == "") {
             alert("Erro de Busca")
         } else {
-            funcNav(`/Search?query=${search}`)
+            NavTo(`/search?query=${search}`)
         }
     }
 
     const keyEnter = (event) => {
         if (event.key === 'Enter') {
-            Navega();
+            FuncNav();
         }
     }
-
-    const [search, setSearch] = useState('');
 
     return (
         <div className='container-nav'>
             <section className='title-nav'>
-                <h3>LOGTV</h3>
+                <h2>LOGTV</h2>
             </section>
             <section className='search-area'>
                 <input 
@@ -36,9 +36,10 @@ function Navbar() {
                 />
                 <span 
                     className="material-symbols-outlined" 
-                    onClick={Navega} 
+                    onClick={FuncNav}
                     type='submit'
-                    >search
+                > 
+                search
                 </span>
             </section>
         </div>
