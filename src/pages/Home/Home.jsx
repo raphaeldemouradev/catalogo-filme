@@ -1,11 +1,11 @@
 import Navbar from "../../components/Navbar/Navbar";
-import Model from "../../components/Model/Model";
+import MovieResponse from "../../components/MovieResponse/MovieResponse";
 
 function Home() {
   return (
     <>
       <Navbar />
-      <Model />
+      <MovieResponse />
     </>
   );
 }
