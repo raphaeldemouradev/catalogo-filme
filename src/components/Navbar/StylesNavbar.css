@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-div.contentNav {
+.container-nav {
     background-color: black;
     padding: 10px;
     width: 100%;
@@ -8,16 +8,16 @@ div.contentNav {
     justify-content: space-between;
 }
 
-div.containerNav {
+.title-nav {
     display: block;
     margin: auto 0px;
 }
 
-h3 {
+.title-nav h3 {
     color: white;
 }
 
-div.searchArea {
+.searchArea {
     display: flex;
 }
 
@@ -33,4 +33,19 @@ div.searchArea input[type=text] {
     width: 150px;
     border-radius: 5px;
     padding-left: 2px;
+}
+
+/*Telas medias*/
+@media screen and (min-width: 600px) {
+    .container-nav {
+        padding: 15px 30px;
+        font-size: 20px;
+    }
+}
+
+/*Tela GRANDE*/
+@media screen and (min-width: 900px) {
+    .container-nav {
+        padding: 20px 40px;
+    }
 }

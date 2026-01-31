@@ -22,11 +22,11 @@ function Navbar() {
     const [search, setSearch] = useState('');
 
     return (
-        <div className='contentNav'>
-            <div className='containerNav'>
+        <div className='container-nav'>
+            <section className='title-nav'>
                 <h3>LOGTV</h3>
-            </div>
-            <div className='searchArea'>
+            </section>
+            <section className='search-area'>
                 <input 
                     type="text"
                     placeholder='Search Movie' 
@@ -40,7 +40,7 @@ function Navbar() {
                     type='submit'
                     >search
                 </span>
-            </div>
+            </section>
         </div>
     )
 }

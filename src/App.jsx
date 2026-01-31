@@ -1,20 +1,8 @@
-import './App.css'
-import { useNavigate } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+import router from './routes/Routes';
 
 function App() {
-  const funcNav = useNavigate(); 
-  function Navega() {
-    funcNav('/Home')
-  }
-
-  return (
-    <div className='door'>
-      <div>
-        <h1>Pagina de Inicio</h1>
-        <button className='dft' onClick={Navega}>Ir para Home</button>
-      </div>
-    </div>
-  )
+  return <RouterProvider router={router} />
 }
 
 export default App
