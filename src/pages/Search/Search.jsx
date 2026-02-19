@@ -1,7 +1,8 @@
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import Navbar from '../../components/Navbar/Navbar.jsx'
+import Navbar from '../../components/Navbar/Navbar'
 import './StylesSearch.css';
+import '../../components/MovieResponse/MovieResponse.css'; // css do home
 
 const url = import.meta.env.VITE_API_URL;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -45,18 +46,19 @@ function Search() {
                 <span className="material-symbols-outlined" onClick={Navega}>arrow_back</span>
                 <Navbar />
             </div>
+
             <div className='contentSearch'>
-                <section>
-                    <h3>Resultados para: {query}</h3>
+                <section className='result'>
+                    <h3>Resultados para: <strong>{query}</strong></h3>
                 </section>
 
                 <aside>
                     {dados && dados.map((movie) => ( 
-                        <div className='contentModel' key={movie.id}>
-                            <div className='imgModel'>
+                        <div className='content-model' key={movie.id}>
+                            <div className='img-model'>
                                 <img src={`${imageUrl}${movie.poster_path}`} alt={movie.title} />
                             </div>
-                            <div className='detailsModel'>
+                            <div className='details-model'>
                                 <Link to={`/Detalhes/${movie.id}`} className='link-button'>Detalhes</Link>
                             </div>
                         </div>
