@@ -1,11 +1,9 @@
-import { Link, useNavigate, useSearchParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { useMovieSearch } from '../../hooks/useMovieSearch';
 import Navbar from '../../components/Navbar/Navbar'
 import './StylesSearch.css';
 import '../../components/MovieResponse/MovieResponse.css'; // css do home
 
-const url = import.meta.env.VITE_API_URL;
-const apiKey = import.meta.env.VITE_API_KEY;
 const imageUrl = import.meta.env.VITE_IMAGE_URL;
 
 function Search() {
@@ -14,32 +12,8 @@ function Search() {
         funcNav('/Home')
     }
 
-    // Hook URL
-    const [searchParams] = useSearchParams();
-    const query = searchParams.get('query') || '';
-
-    // Hook de Busca
-    const [dados, setDados] = useState([]);
-
-    useEffect(() => {
-      const dadosApi = async () => {
-        const getMovie = `${url}/search/movie?api_key=${apiKey}&query=${query}`;
-  
-        const response = await fetch(getMovie);
-        if (!response.ok) {
-          console.log(`Erro de HTTP: Status ${response.status}`);
-        } else {
-          const res = await response.json();
-          //console.log(res.results);
-
-          setDados(res.results);
-        }
-      };
-
-      dadosApi();
-    }, [query]);
-    // Hook de Busca
-
+    const { query, dados, loading } = useMovieSearch();
+    
     return (
         <div className='containerSearch'>
             <div className='searchNavbar'>
@@ -53,7 +27,9 @@ function Search() {
                 </section>
 
                 <aside>
-                    {dados && dados.map((movie) => ( 
+                    {loading && <div className='loading'>Carregando...</div>}
+
+                    {!loading && dados.map((movie) => ( 
                         <div className='content-model' key={movie.id}>
                             <div className='img-model'>
                                 <img src={`${imageUrl}${movie.poster_path}`} alt={movie.title} />
@@ -63,6 +39,12 @@ function Search() {
                             </div>
                         </div>
                     ))}
+
+                    {!loading && dados && dados.length === 0 && (
+                        <div className='no-results'>
+                            <p>❌Filme não encontrado❌</p>
+                        </div>
+                    )}
                 </aside>
             </div>
         </div>

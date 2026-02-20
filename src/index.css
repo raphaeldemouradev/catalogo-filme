@@ -11,4 +11,24 @@ html, body {
   width: 100%;
   height: 100%;
   background-color: #202020;
+  box-sizing: border-box;
+}
+
+.loading {
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50%;
+  font-size: 30px;
+}
+
+.no-results {
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20vh;
+  font-size: 20px;
+  font-weight: bold;
 }

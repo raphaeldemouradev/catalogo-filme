@@ -12,7 +12,7 @@ export function useTopMovies() {
       try {
         setLoading(true);
 
-        console.log("TRY: Buscando dados...")
+        //console.log("TRY: Buscando dados...")
         const topRateMovie = `${url}/movie/top_rated?api_key=${apiKey}`;
         const response = await fetch(topRateMovie);
           if (!response.ok) {
@@ -20,11 +20,11 @@ export function useTopMovies() {
           }
 
         const res = await response.json();
-        console.log(res);
+        //console.log(res);
         setTopMovie(res.results)
 
       } catch (err) {
-        console.error("CATCH: Erro de requisição", err)
+        console.error("Erro de requisição", err.stack)
 
       } finally {
         setLoading(false)
