@@ -34,17 +34,14 @@ function Detalhes() {
                 <section className='info-movie'>
                     <div className='title-movie'>
                         <h2>{dados.title}</h2>
-                        <h3>{(dados.genres?.map(g => g.name).join(', '))}</h3>
-
+                        <p className='gen-movie'>{(dados.genres?.map(g => g.name).join(', '))}</p>
                             <aside>
                                 <div>
                                     <p><span className="material-symbols-outlined">star_rate_half</span>{Number(dados.vote_average).toFixed(1)}</p>
                                 </div>
 
                                 <div>
-                                    <p>
-                                        <span className="material-symbols-outlined">schedule</span>
-                                        {dados.runtime} min</p>
+                                    <p><span className="material-symbols-outlined">schedule</span>{dados.runtime} min</p>
                                 </div>
 
                                 <div>
@@ -52,15 +49,17 @@ function Detalhes() {
                                 </div>
                             </aside>
                         
-                        <p className='description'><strong>DESCRIÇÃO:</strong> {dados.overview}</p>
+                        <p className='description'>
+                            <strong>DESCRIÇÃO:</strong> {dados.overview}
+                        </p>
                     </div>
 
 
                     <div className='credits'>
                         <div>
                             <h3>Creditos (imdb)</h3>
-                            <p>Nota média (imdb): {Number(dados.vote_average).toFixed(1)}</p>
-                            <p>Total de votos (imdb): {dados.vote_count}</p>
+                            <p>Nota média: {Number(dados.vote_average).toFixed(1)}</p>
+                            <p>Total de votos: {dados.vote_count}</p>
                             <p>Tempo: {dados.runtime}</p>
                             <p>Lançado em: {dados.release_date}</p>
                         </div>

@@ -8,6 +8,7 @@ header.header-detalhes {
     width: 100%;
     height: auto;
     position: fixed;
+    top: 0;
 }
 
 header.header-detalhes span {
@@ -35,15 +36,16 @@ img {
     margin: auto;
 }
 
-/* info */
-section.info-movie {
-    background-color: #14162b;
+/* info area */
+.info-movie {
+    background-color: #060b22;
     color: white;
     padding: 10px;
     display: block;
 }
 
-div.title-movie {
+/*title head*/
+.title-movie {
     display: block;
     text-align: left;
 }
@@ -52,19 +54,23 @@ div.title-movie h2 {
     padding: 0px 0px 10px 0px;
 }
 
-div.title-movie h3 {
+.gen-movie {
     padding: 0px 0px 10px 0px;
+    color: #c7c7c7;
+    font-weight: bold;
 }
 
 /*Faixa abaixo do titulo*/
-div.title-movie aside {
+.title-movie aside {
     display: flex;
     padding-bottom: 10px;
+    gap: 10px;
 }
 
-div.title-movie aside div {
-    padding: 5px 10px 5px 0px;
+.title-movie aside div {
+    padding: 5px 10px;
     border-radius: 10px;
+    background-color: #525252;
 }
 
 div.title-movie aside div p {
@@ -75,12 +81,18 @@ div.title-movie aside div p {
 }
 
 div.title-movie aside div p span {
-    padding-right: 4px;
+    padding-right: 5px;
 }
 
 /*Descrição Abaixo da faixa*/
 .description {
-    padding-bottom: 10px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+    text-align: justify;
+}
+
+.description strong {
+    text-decoration: underline;
 }
 
 /*Creditos*/
@@ -88,11 +100,29 @@ div.title-movie aside div p span {
     text-align: left;
 }
 
+.credits div h3 {
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 600px) {
+    .container-detalhes {
+        font-size: 20px;
+    }
+
     img {
         width: 600px;
-        height: 850px;
+        height: 800px;
     }
+
+    /* info area */
+    .title-movie aside {
+        padding-bottom: 18px;
+    }
+
+    .description {
+        padding-right: 20px;
+    }
+
 }
 
 @media screen and (min-width: 900px) {
@@ -108,9 +138,11 @@ div.title-movie aside div p span {
         margin: auto;
     }
 
-    /*info area*/
-    section.info-movie {
-        padding: 10px;
-        display: block;
+    .info-movie {
+        padding: 15px;
+    }
+
+    .description {
+        padding-right: 40px;
     }
 }
