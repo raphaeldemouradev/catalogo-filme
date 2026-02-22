@@ -6,11 +6,14 @@ const apiKey = import.meta.env.VITE_API_KEY;
 
 export function useMovieDetalhes() {
     const [dados, setDados] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { id } = useParams();
 
     useEffect(() => {
         async function dadosApi() {
             try {
+                setLoading(true)
+
                 const getMovie = `${url}/movie/${id}?api_key=${apiKey}`;
                 const response = await fetch(getMovie);
                 if (!response.ok) {
@@ -21,10 +24,12 @@ export function useMovieDetalhes() {
                 }
             } catch (error) {
                 console.error("Erro de requesição", + error.stack)
+            } finally {
+                setLoading(false)
             }
         }
         dadosApi()
     }, [id])
 
-    return { dados }
+    return { dados, loading }
 }

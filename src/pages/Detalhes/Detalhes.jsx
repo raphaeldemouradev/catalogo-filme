@@ -10,7 +10,7 @@ function Detalhes() {
         funcNav(`/Home`)
     }
 
-    const { dados } = useMovieDetalhes();
+    const { dados, loading } = useMovieDetalhes();
 
     return (
         <div>
@@ -19,12 +19,17 @@ function Detalhes() {
                 <h2>LOGTV</h2>
             </header>
 
-            <main className='content-detalhes'>
-                <img 
-                    src={`${imageUrl}${dados.poster_path}`} 
-                    alt={dados.title}
-                    className='img-detalhes'
-                />
+            {loading ? (
+                <div className='loading'>Carregando...</div>
+            ):(
+
+            <main className='container-detalhes'>
+                <section className='img-detalhes'>
+                    <img
+                        src={`${imageUrl}${dados.poster_path}`}
+                        alt={dados.title}
+                    />
+                </section>
 
                 <section className='info-movie'>
                     <div className='title-movie'>
@@ -62,6 +67,7 @@ function Detalhes() {
                     </div>
                 </section>
             </main>
+            )}
         </div>
     )
 }
