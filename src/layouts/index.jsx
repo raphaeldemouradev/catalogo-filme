@@ -4,7 +4,6 @@ export function Layouts() {
     return (
         <div>
             <Outlet />
-            <footer>Renderizou</footer>
         </div>
     )
 }

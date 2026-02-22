@@ -11,6 +11,10 @@ const router = createBrowserRouter([
     element: <Layouts/ >,
     children: [
       {
+        path: "/",
+        element: <Home />,
+      },
+      {
         path: "/home",
         element: <Home />,
       },

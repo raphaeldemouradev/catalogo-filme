@@ -1,42 +1,16 @@
-import { useNavigate, useParams } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useMovieDetalhes } from '../../hooks/useMovieDetalhes';
 import './StylesDetalhes.css';
 
-const url = import.meta.env.VITE_API_URL;
-const apiKey = import.meta.env.VITE_API_KEY;
 const imageUrl = import.meta.env.VITE_IMAGE_URL;
 
-function Detalhes() {
-    // Hook URL do filme clicado
-    const { id } = useParams();
-
-    // Hook Voltar
+function Detalhes() { 
     const funcNav = useNavigate();
     function Navega() {
         funcNav(`/Home`)
     }
 
-    // Hook de Busca
-    const [dados, setDados] = useState([]);
-    
-    useEffect(() => {
-        const dadosApi = async () => {
-        const getMovie = `${url}/movie/${id}?api_key=${apiKey}`;
-
-        const response = await fetch(getMovie);
-            if (!response.ok) {
-                console.log(`Erro de HTTP: Status ${response.status}`);
-            } else {
-                const res = await response.json();
-                //console.log(res);
-
-                setDados(res);
-            }
-        };
-    
-        dadosApi();
-    }, [id]);
-    // Hook de Busca
+    const { dados } = useMovieDetalhes();
 
     return (
         <div>
