@@ -28,6 +28,7 @@ function Detalhes() {
                     <img
                         src={`${imageUrl}${dados.poster_path}`}
                         alt={dados.title}
+                        className='img-data'
                     />
                 </section>
 
