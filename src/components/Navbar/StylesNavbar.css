@@ -27,7 +27,7 @@
     padding-left: 2px;
 }
 
-.search-area span {
+section.search-area span {
     border-radius: 50%;
     border: 1px solid white;
     margin-left: 5px;

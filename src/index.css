@@ -21,6 +21,7 @@ html, body {
   justify-content: center;
   margin-top: 50%;
   font-size: 30px;
+  height: 90vh;
 }
 
 .no-results {
@@ -31,11 +32,12 @@ html, body {
   margin-top: 20vh;
   font-size: 20px;
   font-weight: bold;
+  height: 90vh;
 }
 
 /*footer*/
 footer {
-  background-color: rgb(20, 20, 20);
+  background-color: rgb(15, 15, 15);
   color: white;
   margin-top: 20px;
 }
